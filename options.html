@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>TimeTrack Settings</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="brand">
+      <img src="icons/icon48.png" id="logo-icon" onerror="this.src='icons/icon16.png'" alt="logo">
+      <h1>TimeTrack</h1>
+    </div>
+    <nav class="nav-menu">
+      <a href="dashboard.html" class="nav-item">Dashboard</a>
+      <a href="#" class="nav-item active">Settings</a>
+    </nav>
+    <div class="sidebar-footer">
+      Your data stays local.
+    </div>
+  </div>
+
+  <div class="main-content">
+    <header class="header">
+      <h2>Settings</h2>
+    </header>
+
+    <div class="settings-container">
+      
+      <div class="settings-card">
+        <h3>Tracking Controls</h3>
+        <div class="setting-row">
+          <div class="setting-info">
+            <h4>Pause Tracking</h4>
+            <p>Temporarily stop all time tracking.</p>
+          </div>
+          <div class="setting-action">
+            <label class="switch">
+              <input type="checkbox" id="pause-toggle">
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="settings-card">
+        <h3>Idle Timeout</h3>
+        <p class="setting-desc">Stop tracking when you are inactive for:</p>
+        <div class="setting-row">
+          <select id="idle-select" class="form-select">
+            <option value="1">1 minute</option>
+            <option value="2">2 minutes</option>
+            <option value="5">5 minutes</option>
+            <option value="10">10 minutes</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="settings-card">
+        <h3>Excluded Websites</h3>
+        <p class="setting-desc">TimeTrack will ignore these domains entirely.</p>
+        <div class="add-exclusion">
+          <input type="text" id="exclude-input" placeholder="e.g. localhost, internal.company.com" class="form-input">
+          <button id="btn-add-exclude" class="btn primary">Add</button>
+        </div>
+        <ul id="excluded-list" class="exclusion-list">
+          <!-- List items via JS -->
+        </ul>
+      </div>
+
+      <div class="settings-card danger-zone">
+        <h3>Data Management</h3>
+        <div class="setting-row">
+          <div class="setting-info">
+            <h4>Reset Today's Data</h4>
+            <p>Delete all tracking history for today only.</p>
+          </div>
+          <div class="setting-action">
+            <button id="btn-reset-today" class="btn warning">Reset Today</button>
+          </div>
+        </div>
+        <div class="setting-row">
+          <div class="setting-info">
+            <h4>Delete All Data</h4>
+            <p>Permanently remove all tracking history.</p>
+          </div>
+          <div class="setting-action">
+            <button id="btn-delete-all" class="btn danger">Delete All Data</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="privacy-message">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+        <span><strong>Privacy First:</strong> Your browsing activity never leaves your device. TimeTrack stores all statistics locally using Chrome storage.</span>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="module" src="options.js"></script>
+</body>
+</html>
