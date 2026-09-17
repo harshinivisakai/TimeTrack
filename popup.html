@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>TimeTrack</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header">
+    <div class="brand">
+      <img src="icons/icon16.png" id="logo-icon" alt="logo">
+      <h1>TimeTrack</h1>
+    </div>
+    <div class="tracking-status" id="tracking-status">
+      <span class="pulse"></span>
+      <span id="current-domain">Tracking...</span>
+      <span id="current-time">00:00:00</span>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="subtitle">Today's browsing activity</div>
+    
+    <div class="total-card">
+      <div class="total-label">TOTAL TIME TODAY</div>
+      <div class="total-value" id="total-time">0h 0m</div>
+    </div>
+
+    <div class="section-title">TOP WEBSITES TODAY</div>
+    <div class="websites-list" id="websites-list">
+      <!-- Generated via JS -->
+      <div class="loading">Loading data...</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <button id="btn-dashboard" class="btn primary">View Full Dashboard</button>
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
